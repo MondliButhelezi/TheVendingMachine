@@ -1,4 +1,9 @@
-package vending.product;
+package vending;
+
+import vending.product.Chocolates;
+import vending.product.Product;
+import vending.product.SaltySnacks;
+import vending.product.SoftDrinks;
 
 public class ExtendableVendingMachine {
     private int SoftDrinks, SaltySnacks,Chocolates, stockType = 0;
@@ -9,13 +14,13 @@ public class ExtendableVendingMachine {
         this.Chocolates = Chocolates;
     }
     public void buy(Product product) {
-        if (product instanceof SoftDrinks) {
+        if (product instanceof vending.product.SoftDrinks) {
             SoftDrinks = SoftDrinks-1;
         }
-        if (product instanceof SaltySnacks) {
+        if (product instanceof vending.product.SaltySnacks) {
             SaltySnacks = SaltySnacks-1;
         }
-        if (product instanceof Chocolates) {
+        if (product instanceof vending.product.Chocolates) {
             Chocolates = Chocolates-1;
         }
     }

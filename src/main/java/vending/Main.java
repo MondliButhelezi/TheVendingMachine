@@ -16,13 +16,22 @@ public class Main {
 
         System.out.println("---------  You have Entered Vuyo's Vending Machine ---------- \n" +
                 "---------- This is what is available in stock-------\n" +
-                "1. Soft Drink - R10.00\n" +
-                "2. Salty Snacks - R12.00\n" +
-                "3. Chocolate - R15.00");
+                "-- 1. Salty snacks in stock: [" + overloadedVendingMachine.getStock(saltySnacks) + "] --\n" +
+                "-- 2. Chocolates in stock: [" + overloadedVendingMachine.getStock(chocolates) + "] --\n" +
+                "-- 3. Soft drinks in stock: [" + overloadedVendingMachine.getStock(softDrinks) + "] --\n" +
+                "--------- " +  "Total Stock: [" + overloadedVendingMachine.getStock() + " ] ---------");
 
+//        overloadedVendingMachine.promptEnterKey();
+        overloadedVendingMachine.addStock(5,3,4);
+        System.out.println("Stock has been updated \n" +
+                "5 Soft drinks added \n" +
+                "3 Chocolates added \n" +
+                "4 Salty snacks added \n" +
+                "Total stock: " + overloadedVendingMachine.getStock() + "\n" +
+                "Goodbye...");
 
-        System.out.println(overloadedVendingMachine.getStock());
-        System.out.println(overloadedVendingMachine.getStock());
+//        System.out.println(overloadedVendingMachine.getStock());
+//        System.out.println(overloadedVendingMachine.getStock());
 
 //        System.out.println(overloadedVendingMachine.chocolatesQty);
 //        System.out.println(overloadedVendingMachine.saltySnacksQty);

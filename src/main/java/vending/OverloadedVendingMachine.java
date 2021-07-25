@@ -100,10 +100,9 @@ public class OverloadedVendingMachine {
         return softDrinkLevel + saltySnacksLevel + chocolatesLevel;
     }
 
-    public void promptEnterKey() {
-        System.out.println("Press \"ENTER\" to continue...");
-        Scanner scanner = new Scanner(System.in);
-        scanner.nextLine();
-    }
+//    public void promptEnterKey() {
+//        Scanner scanner = new Scanner(System.in);
+//        scanner.nextLine();
+//    }
 
 }
