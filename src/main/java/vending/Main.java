@@ -20,9 +20,13 @@ public class Main {
                 "2. Salty Snacks - R12.00\n" +
                 "3. Chocolate - R15.00");
 
-        System.out.println(overloadedVendingMachine.chocolatesQty);
-        System.out.println(overloadedVendingMachine.saltySnacksQty);
-        System.out.println(overloadedVendingMachine.softDrinkQty);
+
+        System.out.println(overloadedVendingMachine.getStock());
+        System.out.println(overloadedVendingMachine.getStock());
+
+//        System.out.println(overloadedVendingMachine.chocolatesQty);
+//        System.out.println(overloadedVendingMachine.saltySnacksQty);
+//        System.out.println(overloadedVendingMachine.softDrinkQty);
     }
 
 }

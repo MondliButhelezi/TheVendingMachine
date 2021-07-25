@@ -5,62 +5,105 @@ import vending.product.Product;
 import vending.product.SaltySnacks;
 import vending.product.SoftDrinks;
 
+import java.util.Scanner;
+
 public class OverloadedVendingMachine {
 
-    // Stock quantity for all products
-    int softDrinkQty, saltySnacksQty, chocolatesQty;
+    // STOCK LEVELS FOR ALL PRODUCTS
+    private int softDrinkLevel, saltySnacksLevel, chocolatesLevel;
 
     OverloadedVendingMachine(int softDrinkQty, int saltySnacksQty, int chocolatesQty){
         // set the stockLevel instance variables for each product in the constructor
-        this.softDrinkQty = softDrinkQty;
-        this.saltySnacksQty = saltySnacksQty;
-        this.chocolatesQty = chocolatesQty;
+        softDrinkLevel = softDrinkQty;
+        saltySnacksLevel = saltySnacksQty;
+        chocolatesLevel = chocolatesQty;
     }
 
     //SECTION THAT HAS BUY METHODS
-    void buy(SoftDrinks softdrink) {
-        softDrinkQty = softDrinkQty - 1;
-        System.out.println("buy 1 SoftDrink");
+    public void buy(SoftDrinks softDrink) {
+        if (softDrinkLevel > 0) {
+            softDrinkLevel = softDrinkLevel - 1;
+            softDrink.description();
+        }
     }
-    void buy(SaltySnacks saltySnack) {
-        saltySnacksQty = saltySnacksQty - 1 ;
-        System.out.println("buy 1 SaltySnack");
+    public void buy(SaltySnacks saltySnack) {
+        if (saltySnacksLevel > 0) {
+            saltySnacksLevel = saltySnacksLevel -1;
+            System.out.println();
+            saltySnack.description();
+        }
     }
-    void buy(Chocolates chocolate) {
-        chocolatesQty = chocolatesQty - 1;
-        System.out.println("buy 1 Chocolate");
+    public void buy(Chocolates chocolate) {
+        if (chocolatesLevel > 0) {
+            chocolatesLevel = chocolatesLevel - 1;
+            chocolate.description();
+        }
     }
-    void buy(Product product) {
-        System.out.println("buy 1 of each product");
+    public void buy(Product product) {
+        softDrinkLevel = softDrinkLevel -1;
+        saltySnacksLevel = saltySnacksLevel -1;
+        chocolatesLevel = chocolatesLevel -1;
+    }
+    public void buy(int softDrinksItems , int chocolatesItems , int saltySnacksItems) {
+        softDrinkLevel = softDrinkLevel - softDrinksItems;
+        chocolatesLevel = chocolatesLevel - chocolatesItems;
+        saltySnacksLevel = saltySnacksLevel - saltySnacksItems;
     }
 
     //SECTION THAT HAS ADD STOCKS METHOD
-    void addStock(SoftDrinks softdrink){
-        System.out.println("add 1 SoftDrink");
+    public void addStock(SoftDrinks softdrink) {
+        softDrinkLevel = softDrinkLevel + 1;
     }
-    void addStock(SaltySnacks saltySnack){
-        System.out.println("add 1 SaltySnack");
+    public void addStock(SaltySnacks saltySnack) {
+        saltySnacksLevel = saltySnacksLevel +1;
     }
-    void addStock(Chocolates chocolate){
-        System.out.println("add 1 Chocolate");
+    public void addStock(Chocolates chocolate) {
+        chocolatesLevel = chocolatesLevel + 1;
     }
-    void addStock(Product product){
-        System.out.println("add 3 stock items for each Product type.");
+    public void addStock(Product product) {
+        saltySnacksLevel = saltySnacksLevel +1;
+        chocolatesLevel = chocolatesLevel +1;
+        softDrinkLevel = softDrinkLevel +1;
+    }
+    public void addStock(int softDrinkQty, int chocolateQty, int saltySnacksQty) {
+        softDrinkLevel = softDrinkLevel + softDrinkQty;
+        chocolatesLevel = chocolatesLevel + chocolateQty;
+        saltySnacksLevel = saltySnacksLevel + saltySnacksQty;
     }
 
     //SECTION THAT HAS GET STOCKS METHOD
-    int getStock(SoftDrinks softdrink){
-        return softDrinkQty;
+    public int getStockLevelForSoftDrinks() {
+        return softDrinkLevel;
     }
-    int getStock(SaltySnacks saltySnack){
-        return saltySnacksQty;
+
+    public int getStockLevelForSaltySnacks() {
+        return saltySnacksLevel;
     }
-    int getStock(Chocolates chocolate){
-        return chocolatesQty;
+
+    public int getStockLevelForChocolate() {
+        return chocolatesLevel;
     }
-    int getStock(){
-        int totalStocks = saltySnacksQty + softDrinkQty + chocolatesQty;
-        return totalStocks;
+
+    public int getStock(SoftDrinks softdrink) {
+        return softDrinkLevel;
+    }
+
+    public int getStock(SaltySnacks saltySnack) {
+        return saltySnacksLevel;
+    }
+
+    public int getStock(Chocolates chocolate) {
+        return chocolatesLevel;
+    }
+
+    public int getStock() {
+        return softDrinkLevel + saltySnacksLevel + chocolatesLevel;
+    }
+
+    public void promptEnterKey() {
+        System.out.println("Press \"ENTER\" to continue...");
+        Scanner scanner = new Scanner(System.in);
+        scanner.nextLine();
     }
 
 }
