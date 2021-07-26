@@ -38,31 +38,32 @@ public class ExtendableVendingMachine {
     }
 
     public int getSoftDrinks() {
-        System.out.println("stock level for SoftDrinks " + SoftDrinks);
+        System.out.println("Stock level for SoftDrinks: [ " + SoftDrinks + " ]");
         return SoftDrinks;
     }
 
     public int getChocolates() {
-        System.out.println("stock level for Chocolates " + Chocolates);
+        System.out.println("Stock level for Chocolates: [ " + Chocolates + " ]");
         return Chocolates;
     }
 
     public int getSaltySnacks() {
-        System.out.println("stock level for SaltySnacks " + SaltySnacks);
+        System.out.println("stock level for SaltySnacks: [ " + SaltySnacks + " ]");
         return SaltySnacks;
     }
 
     public int getStock(Product product) {
         if (product instanceof SoftDrinks){
             stockType = stockType + SoftDrinks;
-            System.out.println(stockType);
+            System.out.println("SoftDrinks stock left is: [ " + stockType + " ]");
         }
         if (product instanceof SaltySnacks) {
             stockType = stockType + SaltySnacks;
+            System.out.println("Salty Snacks stock left is: [ " + stockType + " ]");
         }
         if (product instanceof Chocolates) {
             stockType = stockType + Chocolates;
-            System.out.println(stockType);
+            System.out.println("Chocolates stock left is: [ " + stockType + " ]");
         }
 
         return stockType;
