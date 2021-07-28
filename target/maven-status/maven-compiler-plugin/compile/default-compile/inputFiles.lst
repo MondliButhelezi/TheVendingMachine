@@ -1,5 +1,7 @@
+/home/codex/Projects/TheVendingMachine/src/main/java/vending/Main.java
 /home/codex/Projects/TheVendingMachine/src/main/java/vending/product/Product.java
 /home/codex/Projects/TheVendingMachine/src/main/java/vending/product/Chocolates.java
 /home/codex/Projects/TheVendingMachine/src/main/java/vending/OverloadedVendingMachine.java
+/home/codex/Projects/TheVendingMachine/src/main/java/vending/ExtendableVendingMachine.java
 /home/codex/Projects/TheVendingMachine/src/main/java/vending/product/SaltySnacks.java
 /home/codex/Projects/TheVendingMachine/src/main/java/vending/product/SoftDrinks.java
