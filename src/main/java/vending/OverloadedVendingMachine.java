@@ -12,7 +12,7 @@ public class OverloadedVendingMachine {
     // STOCK LEVELS FOR ALL PRODUCTS
     private int softDrinkLevel, saltySnacksLevel, chocolatesLevel;
 
-    OverloadedVendingMachine(int softDrinkQty, int saltySnacksQty, int chocolatesQty){
+    public OverloadedVendingMachine(int softDrinkQty, int saltySnacksQty, int chocolatesQty){
         // set the stockLevel instance variables for each product in the constructor
         softDrinkLevel = softDrinkQty;
         saltySnacksLevel = saltySnacksQty;

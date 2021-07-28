@@ -1,4 +1,4 @@
-package vending;
+package vending.overloaded;
 
 import org.junit.jupiter.api.Test;
 import vending.product.Chocolates;

@@ -1,6 +1,7 @@
-package vending;
+package vending.extandable;
 
 import org.junit.jupiter.api.Test;
+import vending.ExtendableVendingMachine;
 import vending.product.Chocolates;
 import vending.product.SaltySnacks;
 import vending.product.SoftDrinks;
