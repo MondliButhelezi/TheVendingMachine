@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.com/MondliButhelezi/TheVendingMachine.svg?branch=master)](https://travis-ci.com/github/MondliButhelezi/TheVendingMachine)
+
+
 # Overloaded Vending Machine
 
 Loyolo is running a local spaza shop, he is building a vending machine that he wants to install at a friends BraaiShop.
