@@ -1,6 +1,6 @@
 package vending.exceptions;
 
-public class InvalidProductException {
+public class InvalidProductException extends RuntimeException {
     public InvalidProductException() {
         super("Invalid product exception!");
     }
